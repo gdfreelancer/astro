@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app.dart';
+import '../theme/app_theme.dart';
 import '../widgets/ui_components.dart';
 
 class LearnScreen extends StatelessWidget {

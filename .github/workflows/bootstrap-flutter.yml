@@ -36,3 +36,5 @@ jobs:
           else
             echo "No scaffold changes to commit."
           fi
+
+# Scaffold generation workflow.

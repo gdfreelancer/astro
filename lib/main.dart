@@ -202,7 +202,7 @@ class _KundliPageState extends State<KundliPage> {
         const Text('Chart style', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: ink)),
         const SizedBox(height: 4), const Text('Choose the layout you are familiar with.', style: TextStyle(color: muted, fontSize: 12)),
         const SizedBox(height: 14),
-        Wrap(spacing: 8, runSpacing: 8, children: ['North Indian', 'South Indian', 'East Indian'].map((s) => ChoiceChip(label: Text(s), selected: style == s, onSelected: (_) => setState(() => style = s), selectedColor: saffron.withValues(alpha: .3), side: BorderSide(color: style == s ? saffron : const Color(0xFFE5E7E9))).toList()),
+        Wrap(spacing: 8, runSpacing: 8, children: ['North Indian', 'South Indian', 'East Indian'].map((s) => ChoiceChip(label: Text(s), selected: style == s, onSelected: (_) => setState(() => style = s), selectedColor: saffron.withValues(alpha: .3), side: BorderSide(color: style == s ? saffron : const Color(0xFFE5E7E9)))).toList()),
         const SizedBox(height: 18),
         AspectRatio(aspectRatio: 1, child: CustomPaint(painter: ChartPainter(style), child: const Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
           Icon(Icons.brightness_7_rounded, color: saffron, size: 28),

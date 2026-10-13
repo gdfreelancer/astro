@@ -20,3 +20,10 @@ class AppTheme {
     ),
   );
 }
+
+const ink = AppTheme.ink;
+const navy = AppTheme.navy;
+const saffron = AppTheme.saffron;
+const paper = AppTheme.paper;
+const muted = AppTheme.muted;
+const jade = AppTheme.jade;

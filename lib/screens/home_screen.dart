@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app.dart';
+import '../theme/app_theme.dart';
 import '../widgets/ui_components.dart';
 import 'kundli_screen.dart';
 import 'birth_details_screen.dart';

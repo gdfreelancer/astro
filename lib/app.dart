@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
+import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/kundli_screen.dart';
 import 'screens/panchang_screen.dart';
 import 'screens/learn_screen.dart';
 
-const ink = Color(0xFF18283D);
-const saffron = Color(0xFFE9A23B);
-const paper = Color(0xFFF6F4EF);
-const muted = Color(0xFF7B8794);
 
 class SaralJyotishApp extends StatelessWidget {
   const SaralJyotishApp({super.key});
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: 'Saral Jyotish', debugShowCheckedModeBanner: false,
-    theme: ThemeData(useMaterial3: true, scaffoldBackgroundColor: paper,
-      colorScheme: ColorScheme.fromSeed(seedColor: ink),
-      navigationBarTheme: NavigationBarThemeData(backgroundColor: Colors.white, indicatorColor: saffron.withValues(alpha: .2))),
+    theme: AppTheme.light,
     home: const MainShell(),
   );
 }

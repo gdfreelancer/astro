@@ -1,0 +1,38 @@
+name: Bootstrap Flutter project
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bootstrap-flutter.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Generate Flutter project scaffold
+        run: |
+          flutter create --platforms=android,ios,web,linux,windows,macos .
+          flutter pub get
+      - name: Commit generated platform files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate Flutter project platform scaffolding"
+            git push
+          else
+            echo "No scaffold changes to commit."
+          fi

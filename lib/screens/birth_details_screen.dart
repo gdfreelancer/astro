@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app.dart';
+import '../theme/app_theme.dart';
 
 class BirthDetailsScreen extends StatefulWidget {
   const BirthDetailsScreen({super.key});

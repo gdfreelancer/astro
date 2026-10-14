@@ -14,7 +14,7 @@ class _KundliScreenState extends State<KundliScreen> {
     const SizedBox(height: 20), Container(padding: const EdgeInsets.all(18), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24)), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Text('Chart style', style: TextStyle(color: ink, fontSize: 16, fontWeight: FontWeight.w800)), const SizedBox(height: 4),
       const Text('Choose your preferred traditional layout.', style: TextStyle(color: muted, fontSize: 12)), const SizedBox(height: 12),
-      Wrap(spacing: 6, children: ['North Indian','South Indian','East Indian'].map((v) => ChoiceChip(label: Text(v), selected: style == v, onSelected: (_) => setState(() => style = v)).toList()),
+      Wrap(spacing: 6, children: ['North Indian', 'South Indian', 'East Indian'].map((v) => ChoiceChip(label: Text(v), selected: style == v, onSelected: (_) => setState(() => style = v))).toList()),
       const SizedBox(height: 16), AspectRatio(aspectRatio: 1, child: CustomPaint(painter: _ChartPainter(style), child: const Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.brightness_7, color: saffron, size: 30), SizedBox(height: 5), Text('JANMA KUNDLI', style: TextStyle(color: ink, fontWeight: FontWeight.w900, letterSpacing: 1.1)), Text('Illustrative preview', style: TextStyle(color: muted, fontSize: 10))])))),
       const SizedBox(height: 12), const Text('Chart placements are sample-only until birth calculations are connected.', style: TextStyle(color: muted, fontSize: 11)),
     ])),
